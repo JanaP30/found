@@ -1,0 +1,89 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-image: url("https://wallpapercave.com/wp/wp2514433.png");
+}
+
+.content-wrapper {
+    height: 100vh;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.welcome-wrapper p {
+    color: #000;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.welcome-wrapper a {
+    width: 120px;
+    margin: 0 auto;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 45px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+}
+
+.welcome-wrapper a:hover {
+    background-color: #444;
+    text-decoration: none;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    background-color: #fff;
+}
+
+.btns-wrapper a {
+    padding: 0 15px;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 45px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+    margin-bottom: 10px;
+}
+
+.btns-wrapper a:hover {
+    background-color: #444;
+    text-decoration: none;
+}
+
+.update-user-form label {
+    color: yellow;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
