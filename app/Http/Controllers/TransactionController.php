@@ -14,7 +14,11 @@ class TransactionController extends BaseAppController
      */
     public function index()
     {
-        //
+        $data = [
+            'transactions' => $this->user->transactions()->paginate(5)
+        ];
+
+        return view('user.transaction.index', $data);
     }
 
     /**

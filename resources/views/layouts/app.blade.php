@@ -90,6 +90,12 @@
             
         </nav>
         @else
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/deposits">Deposits</a>
+            <a class="navbar-brand" href="/transactions">Transactions</a>
+            <a class="navbar-brand" href="/loans">Loans</a>
+            
+        </nav>
         @endif
       
         @endif
