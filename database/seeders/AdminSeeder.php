@@ -23,7 +23,7 @@ class AdminSeeder extends Seeder
                 'last_name'=>'Admin',
                 'email'=>'admin@admin.com',
                 'password'=>Hash::make('123456'),
-                'type'=>User::$_GROUP_ADMIN,
+                'type'=>User::$_TYPE_ADMIN,
                
 
             ]);

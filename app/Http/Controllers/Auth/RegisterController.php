@@ -78,7 +78,7 @@ class RegisterController extends Controller
       'name'=>$request->input('name'),
       'email',
       'password'=>bcrypt($request->input('password')),
-      'group'=>User::$_GROUP_ADMIN_1
+      'group'=>User::$_GROUP_ADMIN_
         ]);
             return redirect()->route('success');
 

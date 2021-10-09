@@ -54,10 +54,21 @@ class User extends Authenticatable
     }
 
     public function isAdmin(){
-        return $this->type == User::$_GROUP_ADMIN;
+        return $this->type == User::$_TYPE_ADMIN;
     }
 
-    public static $_GROUP_ADMIN=1;
-    public static $_GROUP_USER=2;
+    public static $_TYPE_ADMIN=1;
+    public static $_TYPE_USER=2;
+
+    public static function getTypes(){
+        return [
+            User::$_TYPE_ADMIN => 'Admin',
+            User::$_TYPE_USER => 'User'
+        ];
+    }
+
+    public function getType(){
+        return User::getTypes()[$this->type];
+    }
 }
 
