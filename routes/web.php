@@ -45,6 +45,9 @@ Route::post('admin/deposits/store', [AdminDepositController::class, 'store'])->n
 Route::get('admin/transactions', [AdminTransactionController::class, 'index']);
 
 Route::get('admin/loans', [AdminLoanController::class, 'index']);
+Route::get('admin/approve-loan/{id}', [AdminLoanController::class, 'approveLoan']);
+Route::get('admin/reject-loan/{id}', [AdminLoanController::class, 'rejectLoan']);
+Route::post('admin/reject-loan/{id}', [AdminLoanController::class, 'postRejectLoan'])->name('admin.loan.reject');
 
 Route::get('deposits', [DepositController::class, 'index']);
 

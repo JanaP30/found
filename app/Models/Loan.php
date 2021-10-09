@@ -42,4 +42,8 @@ class Loan extends Model
     public function getStatus(){
         return Loan::getStatuses()[$this->status];
     }
+
+    public function isInPendingStatus(){
+        return $this->status == Loan::$_STATUS_PENDING;
+    }
 }

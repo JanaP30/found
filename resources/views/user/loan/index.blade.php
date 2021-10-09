@@ -19,6 +19,9 @@
                <tr>
                    <td> {{ $loan->amount }} </td>
                    <td> {{ $loan->getStatus()}} </td>
+                   <td>
+                      
+                   </td>
                 
                </tr>
                @endforeach

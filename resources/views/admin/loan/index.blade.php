@@ -21,6 +21,12 @@
                     </td>
                    <td> {{ $loan->amount }} </td>
                    <td> {{ $loan->getStatus()}} </td>
+                   <td>
+                        @if($loan->isInPendingStatus())
+                            <a class="btn btn-primary" href="/admin/approve-loan/{{$loan->id}}">Approve Loan</a>
+                            <a class="btn btn-primary" href="/admin/reject-loan/{{$loan->id}}">Reject Loan</a>
+                        @endif
+                   </td>
                 
                </tr>
                @endforeach
