@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoanController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -48,3 +49,7 @@ Route::get('admin/loans', [AdminLoanController::class, 'index']);
 Route::get('deposits', [DepositController::class, 'index']);
 
 Route::get('transactions', [TransactionController::class, 'index']);
+
+Route::get('loans', [LoanController::class, 'index']);
+Route::get('loans/create', [LoanController::class, 'create']);
+Route::post('loans/store', [LoanController::class, 'store'])->name('user.loans.store');
