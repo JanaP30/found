@@ -18,12 +18,11 @@ class AdminSeeder extends Seeder
     {
         $adminUserExist = User::where('email','admin@admin')->first();
         if(!$adminUserExist){
-            $rootUser=User::create([
-
-                'name'=>'admin',
+            User::create([
+                'first_name'=>'Super',
+                'last_name'=>'Admin',
                 'email'=>'admin@admin.com',
                 'password'=>Hash::make('123456'),
-                'email_verified_at'=>now(),
                 'type'=>User::$_GROUP_ADMIN,
                
 
