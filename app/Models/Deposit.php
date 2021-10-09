@@ -6,21 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Mutual_aid_fund extends Model
+class Deposit extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-
-    protected $fillable=[
-
-            'first_name',
-            'last_name',
-            'address',
-            'phone_number',
-            'email',
-            'password',
-            
-
+    protected $fillable = [
+        'user_id',
+        'date_of_deposit',
+        'amount'
     ];
+
 }

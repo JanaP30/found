@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMutualAidFundsTable extends Migration
+class CreateLoansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateMutualAidFundsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mutual_aid_funds', function (Blueprint $table) {
+        Schema::create('loans', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('address');
-            $table->string('phone_number');
+            $table->bigInteger('user_id');
+            $table->decimal('amount', 8, 2);
+            $table->integer('status');
+            $table->longText('description');
+            $table->longText('admin_response')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +32,6 @@ class CreateMutualAidFundsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mutual_aid_funds');
+        Schema::dropIfExists('loans');
     }
 }

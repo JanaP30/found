@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCashRegistersTable extends Migration
+class CreateDepositsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateCashRegistersTable extends Migration
      */
     public function up()
     {
-        Schema::create('cash_registers', function (Blueprint $table) {
+        Schema::create('deposits', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->datetime('date_of_payment');
-            $table->integer('the_amount_of_the_deposit');
-            $table->integer('total_amount');
-            $table->softDeletes();
+            $table->bigInteger('user_id');
+            $table->date('date_of_deposit');
+            $table->decimal('amount', 8, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -31,6 +30,6 @@ class CreateCashRegistersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cash_registers');
+        Schema::dropIfExists('deposits');
     }
 }
