@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BalanceController as AdminBalanceController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -29,4 +30,4 @@ Route::get('admin/users/show/{id}', [AdminUserController::class, 'show']);
 Route::post('admin/users/update/{id}', [AdminUserController::class, 'update'])->name('admin.users.update');;
 Route::post('admin/users/store', [AdminUserController::class, 'store'])->name('admin.users.store');
 
-
+Route::get('admin/balances', [AdminBalanceController::class, 'index']);

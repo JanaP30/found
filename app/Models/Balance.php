@@ -32,4 +32,15 @@ class Balance extends Model
 
     public static $_TYPE_AVAILABLE = 1;
     public static $_TYPE_RESERVED = 2;
+
+    public static function getTypes(){
+        return [
+            Balance::$_TYPE_AVAILABLE => 'Available',
+            Balance::$_TYPE_RESERVED => 'Reserved'
+        ];
+    }
+
+    public function getType(){
+        return Balance::getTypes()[$this->type];
+    }
 }

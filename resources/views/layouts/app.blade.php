@@ -83,6 +83,7 @@
         @if($user->isAdmin())ž
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/admin/users">Users</a>
+            <a class="navbar-brand" href="/admin/balances">Balances</a>
         </nav>
         @else
         @endif
