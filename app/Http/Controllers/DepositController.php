@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Deposit;
 use Illuminate\Http\Request;
 
-class DepositController extends Controller
+class DepositController extends BaseAppController
 {
     /**
      * Display a listing of the resource.

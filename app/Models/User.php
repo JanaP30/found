@@ -53,6 +53,10 @@ class User extends Authenticatable
         return $this->hasMany(Transaction::class);
     }
 
+    public function isAdmin(){
+        return $this->type == User::$_GROUP_ADMIN;
+    }
+
     public static $_GROUP_ADMIN=1;
     public static $_GROUP_USER=2;
 }

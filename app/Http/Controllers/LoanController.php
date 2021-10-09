@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Loan;
 use Illuminate\Http\Request;
 
-class LoanController extends Controller
+class LoanController extends BaseAppController
 {
     /**
      * Display a listing of the resource.
