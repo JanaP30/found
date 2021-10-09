@@ -41,4 +41,17 @@ class Transaction extends Model
     public static $_TYPE_LOAN=2;
     public static $_TYPE_RESERVATION=3;
     public static $_TYPE_REFUND=4;
+
+    public static function getTypes(){
+        return [
+            Transaction::$_TYPE_DEPOSIT => 'Deposit',
+            Transaction::$_TYPE_LOAN => 'Loan',
+            Transaction::$_TYPE_RESERVATION => 'Founds Reservation',
+            Transaction::$_TYPE_REFUND => 'Refund',
+        ];
+    }
+
+    public function getType(){
+        return Transaction::getTypes()[$this->type];
+    }
 }

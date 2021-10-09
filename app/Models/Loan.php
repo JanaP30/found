@@ -30,4 +30,16 @@ class Loan extends Model
     public static $_STATUS_PENDING = 1;
     public static $_STATUS_REJECTED = 2;
     public static $_STATUS_APPROVED = 3;
+
+    public static function getStatuses(){
+        return [
+            Loan::$_STATUS_PENDING => 'Pending',
+            Loan::$_STATUS_REJECTED => 'Rejected',
+            Loan::$_STATUS_APPROVED => 'Approved'
+        ];
+    }
+
+    public function getStatus(){
+        return Loan::getStatuses()[$this->status];
+    }
 }

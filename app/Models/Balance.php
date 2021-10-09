@@ -43,4 +43,13 @@ class Balance extends Model
     public function getType(){
         return Balance::getTypes()[$this->type];
     }
+
+    public function displayName()
+    {
+        if($this->is_platform){
+            return 'Platform Balance';
+            
+        }
+        return $this->user->first_name. ' '.$this->user->last_name. ' Balance';
+    }
 }

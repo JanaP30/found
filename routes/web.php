@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\BalanceController as AdminBalanceController;
 use App\Http\Controllers\Admin\DepositController as AdminDepositController;
+use App\Http\Controllers\Admin\LoanController as AdminLoanController;
+use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -36,3 +38,11 @@ Route::get('admin/balances', [AdminBalanceController::class, 'index']);
 Route::get('admin/deposits', [AdminDepositController::class, 'index']);
 Route::get('admin/deposits/create', [AdminDepositController::class, 'create'])->name('admin.deposits.create');
 Route::post('admin/deposits/store', [AdminDepositController::class, 'store'])->name('admin.deposits.store');
+
+
+
+Route::get('admin/transactions', [AdminTransactionController::class, 'index']);
+
+
+
+Route::get('admin/loans', [AdminLoanController::class, 'index']);

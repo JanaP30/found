@@ -85,6 +85,9 @@
             <a class="navbar-brand" href="/admin/users">Users</a>
             <a class="navbar-brand" href="/admin/balances">Balances</a>
             <a class="navbar-brand" href="/admin/deposits">Deposits</a>
+            <a class="navbar-brand" href="/admin/transactions">Transactions</a>
+            <a class="navbar-brand" href="/admin/loans">Loans</a>
+            
         </nav>
         @else
         @endif
