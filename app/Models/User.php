@@ -27,6 +27,7 @@ class User extends Authenticatable
         'type'
     ];
 
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -36,8 +37,22 @@ class User extends Authenticatable
         'password'
     ];
 
+    public function balance(){
+        return $this->hasOne(Balance::class);
+    }
 
-    
+    public function deposits(){
+        return $this->hasMany(Deposit::class);
+    }
+
+    public function loans(){
+        return $this->hasMany(Loan::class);
+    }
+
+    public function transactions(){
+        return $this->hasMany(Transaction::class);
+    }
+
     public static $_GROUP_ADMIN=1;
     public static $_GROUP_USER=2;
 }

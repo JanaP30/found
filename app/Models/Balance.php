@@ -18,6 +18,18 @@ class Balance extends Model
         'type'
     ];
 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function inTransactions(){
+        return $this->belongsTo(Transaction::class, 'to_balance_id');
+    }
+
+    public function outTransactions(){
+        return $this->belongsTo(Transaction::class, 'from_balance_id');
+    }
+
     public static $_TYPE_AVAILABLE = 1;
     public static $_TYPE_RESERVED = 2;
 }

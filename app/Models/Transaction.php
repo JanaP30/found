@@ -20,6 +20,22 @@ class Transaction extends Model
         'transactionable_id',
         'transactionable_type'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function fromBalance(){
+        return $this->belongsTo(Balance::class, 'from_balance_id');
+    }
+
+    public function toBalance(){
+        return $this->belongsTo(Balance::class, 'to_balance_id');
+    }
+
+    public function transactionable(){
+        return $this->morphTo();
+    }
     
     public static $_TYPE_DEPOSIT=1;
     public static $_TYPE_LOAN=2;
